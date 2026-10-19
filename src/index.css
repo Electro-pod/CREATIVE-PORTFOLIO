@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { @apply bg-ink text-bone font-sans antialiased; }
+section[id] { scroll-margin-top: 4.5rem; }
+:focus-visible { outline: 2px solid #C58B64; outline-offset: 3px; }
+::selection { background: #C58B64; color: #171D1B; }
+
+@layer components {
+  .btn { @apply inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium tracking-wide transition-colors duration-300; }
+  .btn-solid { @apply bg-bone text-ink hover:bg-tungsten; }
+  .btn-ghost { @apply border border-bone/40 text-bone hover:border-bone hover:bg-bone/10; }
+  .h-display { @apply font-display uppercase leading-[0.95] tracking-tight; }
+  .container-x { @apply mx-auto w-full max-w-7xl px-5 sm:px-8; }
+  .section-pad { @apply py-24 sm:py-32; }
+  .eyebrow { @apply text-xs uppercase tracking-[0.28em] text-tungsten; }
+}
